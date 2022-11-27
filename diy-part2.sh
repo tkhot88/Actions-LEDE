@@ -13,6 +13,7 @@
 # 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
+# 修改字符编码
 sed -i 's/CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"/CONFIG_FAT_DEFAULT_IOCHARSET="utf8"/g' target/linux/generic/config-5.15
 
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
@@ -25,9 +26,9 @@ sed -i 's/CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"/CONFIG_FAT_DEFAULT_IOCHARSET=
 # sed -i 's/luci-theme-opentomcat/luci-theme-atmaterial/g' feeds/luci/collections/luci/Makefile
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
-# sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
-#修正连接数（by ベ七秒鱼ベ）
+#修正连接数
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 #sirpdboy
@@ -53,8 +54,8 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/l
 
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
-# git clone https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
-git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+# git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
@@ -62,7 +63,7 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.gi
 git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git package/luci-app-speedtest-web
 git clone https://github.com/ZeaKyX/speedtest-web.git package/speedtest-web
 
-git clone https://github.com/peijan520/filebrowser.git package/filebrowser
+git clone https://github.com/y12800/luci-app-filebrowser package/filebrowser
 # git clone https://github.com/immortalwrt-collections/openwrt-filebrowser.git package/openwrt-filebrowser
 
 #添加额外非必须软件包

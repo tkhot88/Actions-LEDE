@@ -54,7 +54,7 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/l
 
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
-git clone https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset

@@ -64,7 +64,8 @@ git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-
 # git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git package/luci-app-speedtest-web
 # git clone https://github.com/ZeaKyX/speedtest-web.git package/speedtest-web
 
-git clone https://github.com/y12800/luci-app-filebrowser package/filebrowser
+# git clone https://github.com/y12800/luci-app-filebrowser package/filebrowser
+git clone --depth 1 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 # git clone https://github.com/immortalwrt-collections/openwrt-filebrowser.git package/openwrt-filebrowser
 
 #添加额外非必须软件包

@@ -66,6 +66,7 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
 # git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
@@ -93,8 +94,8 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 
 
 
-git clone --depth 1 https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat
-git clone --depth 1 https://github.com/immortalwrt/packages deng-tmp2 && mv deng-tmp2/net/socat package/deng/socat
+# git clone https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat
+# git clone https://github.com/immortalwrt/packages deng-tmp2 && mv deng-tmp2/net/socat package/deng/socat
 
-sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-socat/Makefile
-sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/socat/Makefile
+# sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-socat/Makefile
+# sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/socat/Makefile

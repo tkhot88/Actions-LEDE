@@ -74,9 +74,9 @@ git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerma
 # git clone https://github.com/ZeaKyX/speedtest-web.git package/speedtest-web
 
 # git clone https://github.com/y12800/luci-app-filebrowser package/filebrowser
-# git clone --depth 1 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
-git clone https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
-# git clone https://github.com/immortalwrt-collections/openwrt-filebrowser.git package/openwrt-filebrowser
+# git clone https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
+git clone https://github.com/wangqn/luci-app-filebrowser package/luci-app-filebrowser
+
 git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
 
 #添加额外非必须软件包

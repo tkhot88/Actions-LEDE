@@ -9,6 +9,12 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+rm -rf feeds/luci/applications/luci-app-dockerman
+rm -rf feeds/luci/applications/luci-app-filebrowser
+
+
+
+
 
 # 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
@@ -34,7 +40,7 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 
 #sirpdboy
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
-git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
+# git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 # git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
@@ -46,8 +52,8 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme
 
 # themes添加（svn co 命令意思：指定版本如https://github）
 # git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
+# git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
+# git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 
@@ -58,16 +64,19 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/l
 # git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
+git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
-git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
+# git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
 # git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 # git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git package/luci-app-speedtest-web
 # git clone https://github.com/ZeaKyX/speedtest-web.git package/speedtest-web
 
 # git clone https://github.com/y12800/luci-app-filebrowser package/filebrowser
-git clone --depth 1 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
+# git clone --depth 1 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
+git clone https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 # git clone https://github.com/immortalwrt-collections/openwrt-filebrowser.git package/openwrt-filebrowser
+git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
 
 #添加额外非必须软件包
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
@@ -79,3 +88,12 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+
+
+
+
+git clone --depth 1 https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat
+git clone --depth 1 https://github.com/immortalwrt/packages deng-tmp2 && mv deng-tmp2/net/socat package/deng/socat
+
+sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-socat/Makefile
+sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/socat/Makefile

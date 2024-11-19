@@ -69,6 +69,7 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
 git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
+git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-app-wechatpush
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
 # git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
@@ -93,7 +94,8 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-
+git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
+git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
 
 
 # git clone https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat

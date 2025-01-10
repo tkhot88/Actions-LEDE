@@ -9,7 +9,7 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-rm -rf feeds/luci/applications/luci-app-dockerman
+# rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/luci/applications/luci-app-filebrowser
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/luci/applications/luci-app-diskman
@@ -66,7 +66,7 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
-git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+# git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
 git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
 git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-app-wechatpush

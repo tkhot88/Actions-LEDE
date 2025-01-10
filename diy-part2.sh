@@ -102,7 +102,11 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-a
 git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
 git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
 
+git clone https://github.com/openwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-cloudflared package/deng/luci-app-cloudflared
+git clone https://github.com/openwrt/packages deng-tmp2 && mv deng-tmp2/net/cloudflared package/deng/cloudflared
 
+sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-cloudflared/Makefile
+sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cloudflared/Makefile
 
 # git clone https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat
 # git clone https://github.com/immortalwrt/packages deng-tmp2 && mv deng-tmp2/net/socat package/deng/socat

@@ -82,6 +82,7 @@ git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-ap
 git clone https://github.com/wangqn/luci-app-filebrowser package/luci-app-filebrowser
 
 git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
+git clone https://github.com/sirpdboy/luci-app-cupsd.git package/deng/luci-app-cupsd
 
 #添加额外非必须软件包
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
@@ -94,8 +95,12 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/deng/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-app-argon-config
+
 git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
 git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
+
 
 
 # git clone https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat

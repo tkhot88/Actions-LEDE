@@ -83,7 +83,7 @@ git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-ap
 git clone https://github.com/wangqn/luci-app-filebrowser package/luci-app-filebrowser
 
 git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
-git clone https://github.com/sirpdboy/luci-app-cupsd.git package/deng/luci-app-cupsd
+# git clone https://github.com/sirpdboy/luci-app-cupsd.git package/deng/luci-app-cupsd
 git clone https://github.com/sirpdboy/luci-app-parentcontrol package/deng/luci-app-parentcontrol
 
 #添加额外非必须软件包
@@ -109,8 +109,11 @@ git clone https://github.com/openwrt/packages deng-tmp2 && mv deng-tmp2/net/clou
 sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-cloudflared/Makefile
 sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cloudflared/Makefile
 
-# git clone https://github.com/immortalwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-socat package/deng/luci-app-socat
-# git clone https://github.com/immortalwrt/packages deng-tmp2 && mv deng-tmp2/net/socat package/deng/socat
+git clone https://github.com/kenzok8/small-package deng-tmp3 && mv deng-tmp3/luci-app-speedtest-web package/deng/luci-app-speedtest-web && mv deng-tmp3/speedtest-web package/deng/speedtest-web && mv deng-tmp3/luci-app-cupsd package/deng/luci-app-cupsd && mv deng-tmp3/cups package/deng/cups
+sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-speedtest-web/Makefile
+sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/speedtest-web/Makefile
+sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-cupsd/Makefile
+sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cups/Makefile
 
-# sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-socat/Makefile
-# sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/socat/Makefile
+
+

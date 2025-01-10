@@ -83,6 +83,7 @@ git clone https://github.com/wangqn/luci-app-filebrowser package/luci-app-filebr
 
 git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
 git clone https://github.com/sirpdboy/luci-app-cupsd.git package/deng/luci-app-cupsd
+git clone https://github.com/sirpdboy/luci-app-parentcontrol package/deng/luci-app-parentcontrol
 
 #添加额外非必须软件包
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome

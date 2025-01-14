@@ -39,8 +39,7 @@ sed -i 's/	config PACKAGE_dnsmasq_full_nftset
 		bool "Build with Nftset support."
 		default n/	config PACKAGE_dnsmasq_full_nftset
 		bool "Build with Nftset support."
-		default y/g' package/network/services/dnsmasq
-/Makefile
+		default n/g' package/network/services/dnsmasq/Makefile
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings

@@ -93,6 +93,10 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 # git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+git clone https://github.com/zijieKwok/luci-app-nginx-manager package/luci-app-nginx-manager
+git clone https://github.com/arenekosreal/luci-app-nginx package/luci-app-nginx
+
+
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns

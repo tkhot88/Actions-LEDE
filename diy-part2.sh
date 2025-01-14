@@ -35,7 +35,11 @@ sed -i 's/LEDE/OpenWrt/g' package/base-files/luci2/bin/config_generate
 # 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
 # sed -i 's/luci-theme-opentomcat/luci-theme-atmaterial/g' feeds/luci/collections/luci/Makefile
 
-sed -i 's/config PACKAGE_dnsmasq_full_nftset bool "Build with Nftset support." default n/config PACKAGE_dnsmasq_full_nftset bool "Build with Nftset support." default y/g' package/network/services/dnsmasq
+sed -i 's/	config PACKAGE_dnsmasq_full_nftset
+		bool "Build with Nftset support."
+		default n/	config PACKAGE_dnsmasq_full_nftset
+		bool "Build with Nftset support."
+		default y/g' package/network/services/dnsmasq
 /Makefile
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）

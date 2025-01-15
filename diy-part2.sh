@@ -13,7 +13,7 @@ rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/luci/applications/luci-app-filebrowser
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/luci/applications/luci-app-diskman
-
+rm -rf package/network/services/dnsmasq
 
 
 
@@ -106,6 +106,9 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-a
 
 git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
 git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
+
+git clone https://github.com/openwrt/openwrt deng-tmp0 && mv deng-tmp0/package/network/services/dnsmasq package/deng/dnsmasq
+sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/dnsmasq/Makefile
 
 git clone https://github.com/openwrt/luci deng-tmp1 && mv deng-tmp1/applications/luci-app-cloudflared package/deng/luci-app-cloudflared
 git clone https://github.com/openwrt/packages deng-tmp2 && mv deng-tmp2/net/cloudflared package/deng/cloudflared

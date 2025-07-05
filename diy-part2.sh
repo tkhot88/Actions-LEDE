@@ -121,4 +121,4 @@ sed -i 's#../../#$(TOPDIR)/feeds/luci/#g' package/deng/luci-app-cupsd/Makefile
 sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cups/Makefile
 
 
-
+sed -i '/^include .*/i export RUSTFLAGS=" -C target-feature=+sse,+sse2 "' feeds/helloworld/shadowsocks-rust/Makefile

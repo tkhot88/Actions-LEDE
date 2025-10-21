@@ -12,7 +12,7 @@
 rm -rf feeds/luci/applications/luci-app-dockerman
 rm -rf feeds/luci/applications/luci-app-filebrowser
 rm -rf feeds/luci/applications/luci-app-kodexplorer
-rm -rf feeds/luci/applications/luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
 # rm -rf package/network/services/dnsmasq
 
 
@@ -69,7 +69,7 @@ git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
-git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
+# git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
 git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-app-wechatpush
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky
 # git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
@@ -93,8 +93,8 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 # git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-git clone https://github.com/zijieKwok/luci-app-nginx-manager package/luci-app-nginx-manager
-git clone https://github.com/arenekosreal/luci-app-nginx package/luci-app-nginx
+# git clone https://github.com/zijieKwok/luci-app-nginx-manager package/luci-app-nginx-manager
+# git clone https://github.com/arenekosreal/luci-app-nginx package/luci-app-nginx
 
 
 #添加smartdns

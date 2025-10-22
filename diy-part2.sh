@@ -19,14 +19,14 @@ rm -rf feeds/luci/applications/luci-app-kodexplorer
 
 # 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
 # sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci/bin/config_generate
 
 # 修改字符编码
-sed -i 's/CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"/CONFIG_FAT_DEFAULT_IOCHARSET="utf8"/g' target/linux/generic/config-6.6
+sed -i 's/CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"/CONFIG_FAT_DEFAULT_IOCHARSET="utf8"/g' target/linux/generic/config-6.12
 # sed -i 's/+firewall/+uci-firewall/g' feeds/luci/applications/luci-app-firewall/Makefile
 
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/LEDE/OpenWrt/g' package/base-files/luci2/bin/config_generate
+sed -i 's/LEDE/OpenWrt/g' package/base-files/luci/bin/config_generate
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-123'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（281677160 build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
@@ -39,7 +39,14 @@ sed -i 's/LEDE/OpenWrt/g' package/base-files/luci2/bin/config_generate
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 #修正连接数
-sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+sed -i '$a\net.netfilter.nf_conntrack_max=965535' package/base-files/files/etc/sysctl.conf
+# sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+
+git clone https://github.com/fw876/helloworld.git package/helloworld
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
+
+
 
 #sirpdboy
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
@@ -101,11 +108,11 @@ git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/deng/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-theme-argon.git package/deng/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-app-argon-config
 
-git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
-git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
+# git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
+# git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
 
 # git clone https://github.com/openwrt/openwrt deng-tmp0 && mv deng-tmp0/package/network/services/dnsmasq package/deng/dnsmasq
 # sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/dnsmasq/Makefile

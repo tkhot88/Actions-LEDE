@@ -90,7 +90,7 @@ git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-ap
 # git clone https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 git clone https://github.com/wangqn/luci-app-filebrowser package/luci-app-filebrowser
 
-git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer
+git clone https://github.com/danchexiaoyang/luci-app-kodexplorer package/luci-app-kodexplorer && chmod -R 755 package/luci-app-kodexplorer
 # git clone https://github.com/sirpdboy/luci-app-cupsd.git package/deng/luci-app-cupsd
 git clone https://github.com/sirpdboy/luci-app-parentcontrol package/deng/luci-app-parentcontrol
 

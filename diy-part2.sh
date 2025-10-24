@@ -44,10 +44,10 @@ sed -i '$a\net.netfilter.nf_conntrack_max=965535' package/base-files/files/etc/s
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 git clone https://github.com/fw876/helloworld.git package/helloworld
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
-
-
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall-packages
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
+# git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
 
 #sirpdboy
 # git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy-package
@@ -76,7 +76,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/ope
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/luci-app-lucky
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
-git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
+# git clone https://github.com/chenmozhijin/luci-app-socat package/luci-app-socat
 # git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
 git clone https://github.com/tty228/luci-app-wechatpush.git package/deng/luci-app-wechatpush
 # git clone https://github.com/y12800/luci-app-lucky.git package/lucky

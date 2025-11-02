@@ -130,3 +130,14 @@ sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cups/Makefile
 
 
 sed -i '/^include .*/i export RUSTFLAGS=" -C target-feature=+sse,+sse2 "' package/helloworld/shadowsocks-rust/Makefile
+
+# 禁用 dummy 内核模块和 kmod-dummy 包
+echo '# CONFIG_NET_DUMMY is not set' >> target/linux/generic/config-6.12
+sed -i '/CONFIG_PACKAGE_kmod-dummy/d' .config
+echo '# CONFIG_PACKAGE_kmod-dummy is not set' >> .config
+
+# 删除已有的 dummy 模块配置（如果存在）
+sed -i '/CONFIG_PACKAGE_kmod-dummy/d' .config
+
+# 显式禁用 dummy 模块
+echo "# CONFIG_PACKAGE_kmod-dummy is not set" >> .config

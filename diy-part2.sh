@@ -131,14 +131,8 @@ sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/cups/Makefile
 
 sed -i '/^include .*/i export RUSTFLAGS=" -C target-feature=+sse,+sse2 "' package/helloworld/shadowsocks-rust/Makefile
 
-# 插入禁用项（如果不存在）
-grep -q '^CONFIG_NET_DUMMY=' target/linux/generic/config-6.12 || sed -i -e '$aCONFIG_NET_DUMMY=n' target/linux/generic/config-6.12
-grep -q '^CONFIG_NET_DUMMY=' target/linux/x86/config-6.12 || sed -i -e '$aCONFIG_NET_DUMMY=n' target/linux/x86/config-6.12
 
 # 禁用 kmod-dummy 包
-sed -i '/CONFIG_PACKAGE_kmod-dummy/d' .config
-echo 'CONFIG_PACKAGE_kmod-dummy=n' >> .config
 sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/generic/config-6.12
 sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/x86/config-6.12
-sed -i -e '$aCONFIG_NET_DUMMY=n' target/linux/generic/config-6.12
-sed -i -e '$aCONFIG_NET_DUMMY=n' target/linux/x86/config-6.12
+sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/x86/64/config-6.12

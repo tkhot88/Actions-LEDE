@@ -136,3 +136,5 @@ sed -i '/^include .*/i export RUSTFLAGS=" -C target-feature=+sse,+sse2 "' packag
 sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/generic/config-6.12
 sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/x86/config-6.12
 sed -i '$a\CONFIG_NET_DUMMY=n' target/linux/x86/64/config-6.12
+# 去掉 AUTOLOAD，让 dummy 不会自动加载
+sed -i 's/AUTOLOAD:=$(call AutoLoad,34,dummy)/# AUTOLOAD removed to disable dummy/g' package/kernel/linux/modules/netdevices.mk

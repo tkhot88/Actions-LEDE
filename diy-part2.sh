@@ -115,6 +115,9 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/deng/luci-a
 git clone https://github.com/derisamedia/luci-theme-alpha package/deng/luci-theme-alpha
 git clone https://github.com/derisamedia/luci-app-alpha-config package/deng/luci-app-alpha-config
 
+git clone https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+git clone https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
+
 # git clone https://github.com/openwrt/openwrt deng-tmp0 && mv deng-tmp0/package/network/services/dnsmasq package/deng/dnsmasq
 # sed -i 's#../../#$(TOPDIR)/feeds/packages/#g' package/deng/dnsmasq/Makefile
 
